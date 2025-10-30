@@ -1,6 +1,5 @@
 import numpy as np
 import imageio.v3 as iio
-from numba import njit
 
 def prepare(image_path, size_out=512, bg_value=255):
     
@@ -51,5 +50,6 @@ def prepare(image_path, size_out=512, bg_value=255):
     out[mask] = img_resized[mask]
 
     iio.imwrite("image_start.png", out)
+
 
     return out
